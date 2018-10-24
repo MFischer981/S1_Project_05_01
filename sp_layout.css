@@ -6,18 +6,20 @@
    Case Problem 1
    
    Layout styles for Slate and Pencil Tutoring
-   Author: 
-   Date:   
+   Author: Micah Fischer
+   Date:   10/23/18
    
    Filename: sp_layout.css
 
 */
 
 /* Window and Body Styles */
+/* Set html to full width */
 html {
     height: 100%;
 }
 
+/* Set body min and max width and centered body. */
 body {
     margin: 0 auto;
     max-width: 960px;
@@ -25,6 +27,7 @@ body {
     height: 100%;
 }
 
+/* Set border box settings/ */
 header,
 nav,
 ul,
@@ -37,36 +40,98 @@ a {
 
 /* Row Styles */
 
-
-
-
+/* Prevents container collapse */
+.row::after {
+    clear: both;
+    content: "";
+    display: table;
+}
 
 /* Page Header Styles */
+/* Header elements floated left, margins and widths set. */
+header img {
+    display: block;
+    width: 70%;
+    float: left;
+}
 
+header nav {
+    float: left;
+    padding: 0 2%;
+    width: 30%;
+}
 
-
-
-
+header nav a {
+    display: block;
+    width: 100%;
+    float: left;
+}
 
 /* Horizontal Navigation List Styles */
-
-
-
+/* Navbar link widths set, floated left. */
+nav.horizontal li {
+    width: 12.5%;
+    float: left;
+}
 
 /* Topics Styles */
+/* Set up grid items widths and floats. Set left and right margins of list items. */
+ul#topics li {
+    display: block;
+    width: 20%;
+    float: left;
+    margin-left: 0%;
+    margin-right: 1.5%;
+}
 
+ul#topics li:first-of-type {
+    margin-left: 7.75%;
+}
 
+ul#topics li:last-of-type {
+    margin-right: 7.75%;
+}
 
-
-
+/* Sized and centered li images. */
+ul#topics li img {
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /* HR Styles */
 
-
-
+/* Set hr width. */
+hr {
+    width: 50%;
+}
 
 /* Customer Comment Styles */
+/* Created 2 column layout of student information. Floated li content and images. */
+ul#comments {
+    width: 75%;
+    margin: 40px auto;
+}
 
+ul#comments li  {
+    display: block;
+    width: 50%;
+    float: left;
+    margin-bottom: 30px;
+}
+
+ul#comments li img {
+    display: block;
+    width: 20%;
+    float: left;
+    margin-left: 5%;
+    margin-right: 5%;
+}
 
 
 /* Footer Styles */
+/* Cleared footer so it would appear below other content. */
+footer {
+    clear: both;
+}
